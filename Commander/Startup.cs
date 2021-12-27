@@ -17,6 +17,7 @@ using Newtonsoft.Json.Serialization;
 using Microsoft.OpenApi.Models;
 
 
+
 namespace Commander
 {
     public class Startup
@@ -24,6 +25,7 @@ namespace Commander
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -31,6 +33,7 @@ namespace Commander
 
         public void ConfigureServices(IServiceCollection services)
         {
+            Console.WriteLine(Configuration.GetConnectionString("CommanderConnection"));
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
                 (Configuration.GetConnectionString("CommanderConnection")));
 
