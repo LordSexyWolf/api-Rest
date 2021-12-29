@@ -16,16 +16,15 @@ namespace Commander.Data{
             throw new NotImplementedException();
         }
 
-        public object GetUserRolById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<UserRol> GetUserRol()
         {
             throw new NotImplementedException();
         }
 
+        public UserRol GetUserRolById(int id)
+        {
+            throw new NotImplementedException();
+        }
        
         public bool SaveChanges()
         {
