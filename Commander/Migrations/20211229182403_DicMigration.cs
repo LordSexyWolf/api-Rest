@@ -4,12 +4,12 @@
 
 namespace Commander.Migrations
 {
-    public partial class NewMigration : Migration
+    public partial class DicMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "UserRol1",
+                name: "UserRol",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -20,11 +20,11 @@ namespace Commander.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserRol1", x => x.Id);
+                    table.PrimaryKey("PK_UserRol", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "User1",
+                name: "User",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
@@ -36,7 +36,7 @@ namespace Commander.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User1", x => x.Id);
+                    table.PrimaryKey("PK_User", x => x.Id);
                     table.ForeignKey(
                         name: "FK_User_UserRol_Id",
                         column: x => x.Id,

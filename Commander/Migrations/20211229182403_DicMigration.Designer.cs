@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Commander.Migrations
 {
     [DbContext(typeof(CommanderContext))]
-    [Migration("20211228212313_NewMigration")]
-    partial class NewMigration
+    [Migration("20211229182403_DicMigration")]
+    partial class DicMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
