@@ -1,6 +1,6 @@
 using AutoMapper;
 using Commander.Dtos;
-using Commander.Models;
+using UserModel.Models;
 
 namespace Commander.Profiles
 {
@@ -9,10 +9,10 @@ namespace Commander.Profiles
         public CommandsProfile()
         {
             //Source -> Target
-            CreateMap<Command, CommandReadDto>();
-            CreateMap<CommandCreateDto, Command>();
-            CreateMap<CommandUpdateDto, Command>();
-            CreateMap<Command, CommandUpdateDto>();
+            CreateMap<User, UserReadDto>();
+            CreateMap<UserCreateDto, User>();
+            CreateMap<UserUpdateDto, User>();
+            CreateMap<User, UserUpdateDto>();
         }
 
     }

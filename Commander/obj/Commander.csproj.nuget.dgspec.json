@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a842225\\source\\repos\\api-Rest\\Commander\\Commander.csproj": {}
+    "C:\\Users\\a842225\\source\\repos\\CodeFirst-APIRest\\api-Rest\\Commander\\Commander.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a842225\\source\\repos\\api-Rest\\Commander\\Commander.csproj": {
+    "C:\\Users\\a842225\\source\\repos\\CodeFirst-APIRest\\api-Rest\\Commander\\Commander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a842225\\source\\repos\\api-Rest\\Commander\\Commander.csproj",
+        "projectUniqueName": "C:\\Users\\a842225\\source\\repos\\CodeFirst-APIRest\\api-Rest\\Commander\\Commander.csproj",
         "projectName": "Commander",
-        "projectPath": "C:\\Users\\a842225\\source\\repos\\api-Rest\\Commander\\Commander.csproj",
+        "projectPath": "C:\\Users\\a842225\\source\\repos\\CodeFirst-APIRest\\api-Rest\\Commander\\Commander.csproj",
         "packagesPath": "C:\\Users\\a842225\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a842225\\source\\repos\\api-Rest\\Commander\\obj\\",
+        "outputPath": "C:\\Users\\a842225\\source\\repos\\CodeFirst-APIRest\\api-Rest\\Commander\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

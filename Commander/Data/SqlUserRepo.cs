@@ -1,46 +1,46 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Commander.Models;
+using UserModel.Models;
 
 namespace Commander.Data
 {
-    public class SqlCommanderRepo : ICommanderRepo
+    public class SqlUserRepo : IUserRepo
     {
         private readonly CommanderContext _context;
 
-        public SqlCommanderRepo(CommanderContext context)
+        public SqlUserRepo(CommanderContext context)
         {
             _context = context;
         }
 
-        public void CreateCommand(Command cmd)
+        public void CreateUser(User cmd)
         {
             if(cmd == null)
             {
                 throw new ArgumentNullException(nameof(cmd));
             }
 
-            _context.Commands.Add(cmd);
+            _context.User.Add(cmd);
         }
 
-        public void DeleteCommand(Command cmd)
+        public void DeleteUser(User cmd)
         {
             if(cmd == null)
             {
                 throw new ArgumentNullException(nameof(cmd));
             }
-            _context.Commands.Remove(cmd);
+            _context.User.Remove(cmd);
         }
 
-        public IEnumerable<Command> GetAllCommands()
+        public IEnumerable<User> GetUsers()
         {
-            return _context.Commands.ToList();
+            return _context.User.ToList();
         }
 
-        public Command GetCommandById(int id)
+        public User GetUserById(int id)
         {
-            return _context.Commands.FirstOrDefault(p => p.Id == id);
+            return _context.User.FirstOrDefault(p => p.Id == id);
         }
 
         public bool SaveChanges()
@@ -48,7 +48,7 @@ namespace Commander.Data
             return (_context.SaveChanges() >= 0);
         }
 
-        public void UpdateCommand(Command cmd)
+        public void UpdateUser(User cmd)
         {
             //Nothing
         }

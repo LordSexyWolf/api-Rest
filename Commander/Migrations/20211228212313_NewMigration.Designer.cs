@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Commander.Migrations
 {
     [DbContext(typeof(CommanderContext))]
-    [Migration("20211227152552_InitialMigration7")]
-    partial class InitialMigration7
+    [Migration("20211228212313_NewMigration")]
+    partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,13 +23,10 @@ namespace Commander.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Commander.Models.Command", b =>
+            modelBuilder.Entity("UserModel.Models.User", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("CreationDate")
                         .IsRequired()
@@ -47,9 +44,45 @@ namespace Commander.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<int>("fk_id_UserRol")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Commands");
+                    b.ToTable("User");
+                });
+
+            modelBuilder.Entity("UserRolModel.Models.UserRol", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserRol");
+                });
+
+            modelBuilder.Entity("UserModel.Models.User", b =>
+                {
+                    b.HasOne("UserRolModel.Models.UserRol", "UserRolModel")
+                        .WithMany()
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserRolModel");
                 });
 #pragma warning restore 612, 618
         }

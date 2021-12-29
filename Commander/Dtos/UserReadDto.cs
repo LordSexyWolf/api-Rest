@@ -1,6 +1,6 @@
 namespace Commander.Dtos
 {
-    public class CommandReadDto
+    public class UserReadDto
     {
 
     public int Id { get; set; }

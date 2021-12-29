@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Commander.Models{
-    public class Command{
-        
-        [Key]
-        [Required]
-        public int Id { get; set; }
-
+namespace Commander.Dtos
+{
+    public class UserCreateDto
+    {
         [Required]
         [MaxLength(250)]
         public string UserName { get; set; }
@@ -19,6 +16,5 @@ namespace Commander.Models{
 
         [Required]
         public int StatusId { get; set; }
-        
     }
 }

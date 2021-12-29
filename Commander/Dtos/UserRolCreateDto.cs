@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace UserRol.Models{
-    public class UserRol{
-        
-        [Key]
-        [Required]
-        public int Id { get; set; }
-
+namespace Commander.Dtos
+{
+    public class UserRolCreateDto
+    {
         [Required]
         public int UserId { get; set; }
         
@@ -15,6 +12,5 @@ namespace UserRol.Models{
 
         [Required]
         public int StatusId { get; set; }
-
     }
 }

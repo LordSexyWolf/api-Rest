@@ -1,4 +1,5 @@
-using Commander.Models;
+using UserModel.Models;
+using UserRolModel.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Commander.Data
@@ -10,7 +11,8 @@ namespace Commander.Data
             
         }
 
-        public DbSet<Command> Commands { get; set; }
+        public DbSet<UserRol> UserRol { get; set; }
+        public DbSet<User> User { get; set; }
 
     }
 }

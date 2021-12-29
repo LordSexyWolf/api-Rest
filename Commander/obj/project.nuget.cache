@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K4RLefu979KGQOlRY/KqU26OsyrWEqTY63JgCQV/qBKsAlXsg04fCeMxqLN7O6w7wADTkFUpAa8pZ1EEnyd0Bw==",
+  "dgSpecHash": "Thf7USyXAgA68e2a2+L/3/BYVrwB5zRxRug8HkWRaJ5AAVCmZExAFqzJWOd69t9ul5qazzTFMnltMhqsgNsXJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\a842225\\source\\repos\\api-Rest\\Commander\\Commander.csproj",
+  "projectFilePath": "C:\\Users\\a842225\\source\\repos\\CodeFirst-APIRest\\api-Rest\\Commander\\Commander.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a842225\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\a842225\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

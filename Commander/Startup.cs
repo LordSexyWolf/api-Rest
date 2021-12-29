@@ -43,7 +43,7 @@ namespace Commander
             
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+            services.AddScoped<IUserRepo, SqlUserRepo>();
 
             services.AddSwaggerGen(c=> {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Commander API", Version = "v1" });
